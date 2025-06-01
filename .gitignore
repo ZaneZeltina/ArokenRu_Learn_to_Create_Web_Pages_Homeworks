@@ -59,7 +59,6 @@ Thumbs.db
 *.pem
 
 # ignore files with sensitive data
-info.txt
 
 # --------------------------------------------------------
 # BEGIN Explictly Allowed Files (i.e. do NOT ignore these)
