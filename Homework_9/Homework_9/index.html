@@ -18,10 +18,55 @@
       </ul>
     </nav>
   </header>
-  <section>
+  <div>
     <h1>Create Video and Audio files</h1>
+  </div>
+  <section>
     <p>
       Today we are looking different ways how we can work with video and audio files in our <mark>HTML document</mark>.
+    </p>
+    <p>
+      Here we add video file with necessary HTML document <mark>video attributes</mark>.
+    </p>
+    <p>
+      We use tags: video and in this tag we create tag: source and add two formats of our video file. First, we add video file with <mark>webm</mark> format and in second video we use: <mark>mp4</mark> file format.
+    </p>
+    <p>
+      For web browser fastest understanding our video files we must to use in tag: source attribute: <mark>type="video/webm"</mark> and in second tag source we need to write: <mark>type="video/mp4"</mark>.
+    </p>
+    <p>
+      We do it for one reason. If some web browser don't allow webm format, it show to us mp4 format video. But if, our browser don't allow any of these formats, we need to write something for ours clients, who use our page.
+    </p>
+    <p>
+      Also we can to use HTML document video attributes: controls, muted, autoplay, loop, poster, preload.
+    </p>
+    <p>
+      We use teg video attribute: controls for add to our video file controls panel.
+    </p>
+    <p>
+      We can add tag video attribute: muted for turn off sound of our video file. But in nowadays in web browsers all video for a default are muted. That is doing because, if video file is don't muted it is disturbing page users.
+    </p>
+    <p>
+      Also, we can add in video tag attribute: autoplay, who starts us video file automatic always when we reload us page.
+    </p>
+    <p>
+      Tag video attribute: loop is necessary if we want to repeat us video file infinite times.
+    </p>
+    <p>
+      Good practice is: adding for tag video attribute: poster="", where in "" we put the image, what will be our video cover. We can add dome photo or anything else, what we want to show to page users, when video file is not playing.
+    </p>
+    <p>
+      Good practice is add in tag video attribute: preload="", where we add value: metadata, what is some video data. It is necessary for fast web page loading. If we add this value, we will see video file, but it don't fully loading in page. It loading fully, when we will pressing play button. Also we can add value: none. It means: video file and poster image don't load, we only will see gray place and controls panel. In attribute: preload we can add other values. Also in there we can add video image, video cover image. Then we don't use attribute: poster. Default value of preload attribute is: "auto", what means all video data are loading when we open the page.
+    </p>
+    <p>Look for these terms with example.</p>
+    <video width="600" controls poster="img/swan.jpg" preload="metadata">
+      <source src="video/water.webm" type="video/webm">
+      <source src="video/water.mp4" type="video/mp4">
+      Sorry, your web browser can't to show this video file!
+    </video>
+    <h2>Add Audio file</h2>
+    <p>
+      Here we can add audio file. Audio file. We must to use tag: audio. Tag audio has all of them attributes what is in tag: video. Add audio file, in: <mark>mp3</mark> format. Look for adding audio file in our HTML document.
     </p>
   </section>
   <p>Here is starting page footer</p>
