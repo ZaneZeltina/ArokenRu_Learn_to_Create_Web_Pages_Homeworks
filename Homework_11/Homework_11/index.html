@@ -8,7 +8,183 @@
   <title>Homework 11</title>
 </head>
 <body>
-  
+  <header>
+    <h1 id="up">Tables in HTML</h1>
+    <nav>
+      <ol>
+        <li>
+          <a href="#task_1">Tables task</a>
+        </li>
+        <li>
+          <a href="#task_2">Tables task</a>
+        </li>
+        <li>
+          <a href="#task_3">Tables task</a>
+        </li>
+      </ol>
+    </nav>
+  </header>
+  <main>
+    <section id="task_1">
+      <article>
+        <h2>Tables</h2>
+        <p>
+          Long time ago all web pages was created use tables tags. Developers made web pages using only table tags.
+        </p>
+        <p>
+          But in nowadays tables are used only to show in page some tables data.
+        </p>
+        <h2>First table</h2>
+        <p>
+          Look at the tables tags. We must to use obligate tag: <mark>table</mark>. In this tag we need to create a little table description using tag: <mark>caption</mark> where we write some table short description. <mark>Important!</mark> Tag: caption in one table can be only one time. 
+        </p>
+        <p>
+          After that we use tag: <mark>tr</mark> what means: table row. That is obligate tag in every table.
+        </p>
+        <p>
+          In tag: tr we use tag: <mark>td</mark>, that means: table description.
+        </p>
+        <p>
+          Also we can use tag: <mark>th</mark> in tag: tr, to write some bold text. It is like a title, bold text.
+        </p>
+        <p>
+          Every new tables line we need to make using tags: <mark>tr</mark> and <mark>td</mark>. 
+        </p>
+        <h3>Tables attributes</h3>
+        <p>
+          Tables has only two attributes: <mark>colspan</mark> and <mark>rowspan</mark>. It is necessary if we want to combine some horizontal and vertical lines. We use attribute: <mark>colspan</mark> to combine horizontal lines, and we use attribute: <mark>rowspan
+          </mark> to combine vertical lines.
+        </p>
+        <p>
+          look at this all with example. Create simple table.
+        </p>
+        <table>
+          <caption>Simple table</caption>
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Education</th>
+          </tr>
+          <tr>
+            <td>Zane</td>
+            <td>Zeltina</td>
+            <td>36</td>
+            <td>female</td>
+            <td>hight school</td>
+          </tr>
+          <tr>
+            <td>Livija</td>
+            <td>Zeltina</td>
+            <td>66</td>
+            <td>female</td>
+            <td>doctorate</td>
+          </tr>
+          <tr>
+            <td colspan="5">Description</td>
+          </tr>
+        </table>
+      </article>
+    </section>
+    <section id="task_2">
+      <article>
+        <h2>Second Semantic table</h2>
+        <p>
+          We was creating simple table. We use standart tags. But in nowadays for screen reader and another developers, who will working with us code, and we, when we will opening this project after couple years, it will be hard to read this code. It will be difficult for us to navigate it.
+        </p>
+        <p>
+          Look: How we must to crate Semantic wright table. 
+        </p>
+        <p>
+          First: We need to use right Semantic table structure. It means: we mut to use these tags: <mark>table, caption, thead, tbody, tfoot</mark>. In tag: thead we create tag: <mark>th
+          </mark> where we put same table items titles. In tags: tbody, tfoot we must create tag: <mark>td</mark>, where we put tables items description.
+        </p>
+        <p>
+          Also, don't forget use tables attributes: <mark>colspan</mark> and <mark>rowspan</mark>. <mark>Remember</mark>! They unites us table horizontal and vertical items.
+        </p>
+        <p>
+          Look for that all with a example.
+        </p>
+        <table>
+          <caption>
+            Second Table
+          </caption>
+          <thead>
+            <tr>
+              <th>Teaching income</th>
+              <th>Main job</th>
+              <th>Extra work</th>
+              <th>Monthly payments</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>300$</td>
+              <td>2000$</td>
+              <td>1000$</td>
+              <td>1100$</td>
+              <td>2200$</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5">These are one month total</td>
+            </tr>
+          </tfoot>
+        </table>
+        <p>
+          We see us second table is like a first simple table. But now: this table is Semantic right. It will be work well with screen readers, and another developers can easy understand us HTML code.
+        </p>
+        <p>
+          These was simple tables. Now try to make hardest table, using Semantic right tags. Also, don't forget use table attributes: <mark>colspan</mark> and <mark>rowspan</mark>. 
+        </p>
+        <p>
+          <mark>Remember!</mark> We need more, more and more practice. Let's do it.
+        </p>
+        <h2>Create big difficult table</h2>
+        <p>
+          Here we are creating big and difficult table, using all Semantic right table tags and table attributes.
+        </p>
+
+        <table>
+          <caption>
+
+          </caption>
+        </table>
+        
+      </article>
+    </section>
+    <section id="task_3">
+      <article>
+        
+      </article>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <p>
+        I am page footer
+      </p>
+    </div>
+    <nav>
+      <ol>
+        <li>
+          <a href="#task_1">Tables task</a>
+        </li>
+        <li>
+          <a href="#task_2">Tables task</a>
+        </li>
+        <li>
+          <a href="#task_3">Tables task</a>
+        </li>
+      </ol>
+    </nav>
+    <div>
+     <a href="#up">Go Up</a>
+    </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>
