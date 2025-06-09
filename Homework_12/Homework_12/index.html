@@ -110,24 +110,25 @@
             <legend>User Information</legend>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        
+            <br>
             <label for="surname">Surname:</label>
             <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
-        
+            <br>
             <label for="age">Your Age:</label>
             <input type="text" id="age" name="age" placeholder="Enter your age" required>
-        
+            <br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
+            <br>
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-    
+            <br>
             <label for="website">Website:</label>
             <input type="url" id="website" name="website" placeholder="Enter your website URL">
-    
+            <br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <br>
             <label for="confirm_password">Confirm Password:</label>
             <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
           </fieldset>
@@ -135,38 +136,48 @@
             <legend>Gender</legend>
             <label for="gender_male">Male</label>
             <input type="radio" id="gender_male" name="gender" value="male" checked>
+            <br>
             <label for="gender_female">Female</label>
             <input type="radio" id="gender_female" name="gender" value="female">
           </fieldset>
           <fieldset>
             <legend>Favorite Programming Language</legend>
             <label for="language">Favorite Programming Language:</label>
-            <select id="language" name="language" required>
+            <input list="languages" type="text" id="language" name="language" placeholder="Enter your favorite programming language" required>
+            <datalist id="languages">
               <option value="javascript">JavaScript</option>
               <option value="python">Python</option>
               <option value="java">Java</option>
-            </select>
+            </datalist>
           </fieldset>
           <fieldset>
             <legend>Interests</legend>
             <label for="interests">Select your interests:</label>
             <input type="checkbox" id="interest_coding" name="interests" value="coding">
+            <br>
             <label for="interest_coding">Coding</label>
             <input type="checkbox" id="interest_gaming" name="interests" value="gaming">
+            <br>
             <label for="interest_gaming">Gaming</label>
             <input type="checkbox" id="interest_reading" name="interests" value="reading">
+            <br>
             <label for="interest_reading">Reading</label>
             <input type="checkbox" id="interest_traveling" name="interests" value="traveling">
+            <br>
             <label for="interest_traveling">Traveling</label>
+            <input type="checkbox" id="interest_other" name="interests" value="other">
           </fieldset>
           <fieldset>
             <legend>File Upload and additional Comments</legend>
             <label for="file_upload">Upload your file:</label>
             <input type="file" id="file_upload" name="file_upload" accept=".jpg, .png, .pdf">
+            <br>
             <label for="comments">Additional Comments:</label>
+            <br>
             <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here"></textarea>
           </fieldset>
           <button type="submit">Submit</button>
+          <br>
           <button type="reset">Reset</button>
         </form>
       </article>
@@ -182,13 +193,13 @@
             <legend>Address Information</legend>
             <label for="address">Address:</label>
             <input type="text" id="address" name="address" placeholder="Enter your address" required>
-
+            <br>
             <label for="city">City:</label>
             <input type="text" id="city" name="city" placeholder="Enter your city" required>
-
+            <br>
             <label for="state">State:</label>
             <input type="text" id="state" name="state" placeholder="Enter your state" required>
-
+            <br>
             <label for="zip">ZIP Code:</label>
             <input type="text" id="zip" name="zip" placeholder="Enter your ZIP code" required>
           </fieldset>
@@ -196,14 +207,15 @@
             <legend>Contact Information</legend>
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-
+            <br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
           </fieldset>
           <fieldset>
             <legend>Your favorite color</legend>
             <label for="color">Select your favorite color:</label>
-            <select id="color" name="color" required>
+            <input list="colors" type="text" id="color" name="color" placeholder="Enter your favorite color" required>
+            <datalist id="colors">
               <option value="red">Red</option>
               <option value="green">Green</option>
               <option value="blue">Blue</option>
@@ -213,7 +225,8 @@
               <option value="pink">Pink</option>
               <option value="black">Black</option>
               <option value="other">Other</option>
-            </select>
+            </datalist>
+            <br>
             <label for="color_picker">Choose your own color:</label>
             <input type="color" id="color_picker" name="color_picker" value="#0000ff">
           </fieldset>
@@ -225,17 +238,22 @@
           <fieldset>
             <legend>Feedback</legend>
             <label for="feedback">Your Feedback:</label>
+            <br>
             <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
+            <br>
             <label for="rating">Rate your experience:</label>
             <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="3">
           <fieldset>
             <legend>Date and Time</legend>
             <label for="datetime-local">Select a date:</label>
             <input type="datetime-local" id="datetime-local" name="datetime-local" required>
+            <br>
             <label for="date">Select a Month:</label>
             <input type="month" id="month" name="month" required>
+            <br>
             <label for="week">Select a Week:</label>
             <input type="week" id="week" name="week" required>
+            <br>
             <label for="time">Select a Time:</label>
             <input type="time" id="time" name="time" required>
           </fieldset>
@@ -243,6 +261,7 @@
             <legend>Preferences</legend>
             <label for="newsletter">Subscribe to newsletter:</label>
             <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <br>
             <label for="newsletter">Don't subscribe:</label>
             <input type="checkbox" id="newsletter" name="newsletter" value="no">
           </fieldset>
