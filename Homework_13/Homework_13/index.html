@@ -8,7 +8,353 @@
   <title>Homework 13</title>
 </head>
 <body>
-  
+  <header>
+    <h1 id="up">In-depth Forms HTML</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#about">About Forms</a>
+        </li>
+        <li>
+          <a href="#form_1">Form 1</a>
+        </li>
+        <li>
+          <a href="#form_2">Form 2</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <article>
+        <h2>Learning In-depth about HTML Forms</h2>
+        <p>
+          Today we are learning about HTML forms. We will explore, how we can work with tag <code>&lt;select&gt;</code> and its various elements, ant this various attributes.
+          We will also learn about the <code>&lt;input&gt;</code> tag and its different types, such as text, password, checkbox, radio, and submit. Additionally, we will cover how to use the <code>&lt;label&gt;</code> tag to associate labels with form controls.
+          The <code>&lt;form&gt;</code> tag is used to create a form, and it can contain various input elements. We will also learn about the <code>action</code> and <code>method</code> attributes of the <code>&lt;form&gt;</code> tag, which specify how the form data should be submitted.
+        </p>
+        <p>
+          We must to use all of forms tags and attributes, which we have learned in the previous homework, to create two forms with different input types and attributes.
+        </p>
+        <p>
+          Remember, which we have learned in the previous homework. Remember all input types and attributes.
+        </p>
+        <p>
+          Tag input has a different ways to be used, including: <br>
+          - Text input: <code>&lt;input type="text"&gt;</code> <br>
+          - Email input: <code>&lt;input type="email"&gt;</code> <br>
+          - Password input: <code>&lt;input type="password"&gt;</code> <br>
+          - Radio buttons: <code>&lt;input type="radio"&gt;</code> <br>
+          - Checkboxes: <code>&lt;input type="checkbox"&gt;</code> <br>
+          - Submit button: <code>&lt;input type="submit"&gt;</code>
+          - Color input: <code>&lt;input type="color"&gt;</code> <br>
+          - Date input: <code>&lt;input type="date"&gt;</code> <br>
+          - Datetime-local input: <code>&lt;input type="datetime-local"&gt;</code> <br>
+          - Month input: <code>&lt;input type="month"&gt;</code> <br>
+          - Week input: <code>&lt;input type="week"&gt;</code> <br>
+          - Time input: <code>&lt;input type="time"&gt;</code> <br>
+          - URL input: <code>&lt;input type="url"&gt;</code> <br>
+          - Tel input: <code>&lt;input type="tel"&gt;</code> <br>
+          - Search input: <code>&lt;input type="search"&gt;</code> <br>
+          - Number input: <code>&lt;input type="number"&gt;</code> <br>
+          - Range input: <code>&lt;input type="range"&gt;</code> <br>
+          - File input: <code>&lt;input type="file"&gt;</code> <br>
+        </p>
+        <p>
+          At last homework we was used tags datalist with tag option, but it's not a best practice. To make our Form Semantic right, we will use tag <code>&lt;select&gt;</code> with tag <code>&lt;option&gt;</code> to create dropdown menus.
+        </p>
+        <p>
+          Remember! We need to use only Semantic tags and attributes in our forms. Semantic tags help search engines and other user agents understand the structure and meaning of the content on a web page, which can improve accessibility and SEO.
+        </p>
+        <p>
+          Forms are essential for collecting user input and submitting data to a server. They can include text fields, checkboxes, radio buttons, dropdown menus, and more. Understanding how to create and manage forms is crucial for web development.
+        </p>
+        <p>
+          In this homework, we will create two forms with different input types and attributes. The first form will include text inputs, a checkbox, and a submit button. The second form will include radio buttons, a dropdown menu, and a submit button.
+        </p>
+      </article>
+    </section>
+    <section id="form_1">
+      <article>
+        <h2>Create difficult Form</h2>
+        <p>
+          Here we will create a more complex form that includes various input types and attributes. This form will demonstrate how to use the <code>&lt;select&gt;</code> tag for dropdown menus, the <code>&lt;input&gt;</code> tag for different input types, and the <code>&lt;label&gt;</code> tag for better accessibility.
+        </p>
+        <form action="https://example.com/submit" method="POST">
+          <fieldset>
+            <legend>Account information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required placeholder="Enter your surname">
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required placeholder="Enter your age">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <br>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="Enter your website URL">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <br>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+          </fieldset>
+          <fieldset>
+            <legend>Your interests</legend>
+            <label for="interests">Select your interests:</label>
+            <select id="interests" name="interests" multiple required>
+              <option value="" disabled selected>Nothing selected</option>
+              <option value="coding">Coding</option>
+              <option value="design">Design</option>
+              <option value="music">Music</option>
+              <option value="sports">Sports</option>
+            </select>
+            <br>
+            <label for="other_interests">Other interests:</label>
+            <input type="text" id="other_interests" name="other_interests" placeholder="Enter your interests">
+          </fieldset>
+          <fieldset>
+            <legend>Preferences</legend>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="" selected disabled>Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <br>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="" selected disabled>Select your country</option>
+              <option value="usa">USA</option>
+              <option value="canada">Canada</option>
+              <option value="mexico">Mexico</option>
+              <option value="europe">Europe</option>
+              <option value="uk">UK</option>
+              <option value="australia">Australia</option>
+            </select>
+            <br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            <br>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter your state" required>
+            <br>
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip" placeholder="Enter your ZIP code" required>
+          </fieldset>
+          <fieldset>
+            <legend>Additional Information</legend>
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" placeholder="Enter your user name">
+            <br>
+            <label for="userBio">User Bio:</label>
+            <input type="text" id="userBio" name="userBio" placeholder="Enter your user bio">
+            <br>
+            <label for="userJob">Are You a programmer?</label>
+            <input type="radio" id="userJobYes" name="userJob" value="yes" required>
+            <label for="userJobYes">Yes</label>
+            <input type="radio" id="userJobNo" name="userJob" value="no" required>
+            <label for="userJobNo">No</label>
+            <br>
+            <label for="fileUpload">Add Your favorite picture:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".jpg, .jpeg, .png, .pdf">
+            <br>
+            <label for="colorPicker">Choose Your favorite color:</label>
+            <select name="color" id="color" required>
+              <option value="" selected disabled>Nothing selected</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="yellow">Yellow</option>
+              <option value="purple">Purple</option>
+              <option value="orange">Orange</option>
+              <option value="pink">Pink</option>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="gray">Gray</option>
+              <option value="brown">Brown</option>
+              <option value="cyan">Cyan</option>
+              <option value="magenta">Magenta</option>
+              <option value="lime">Lime</option>
+              <option value="teal">Teal</option>
+              <option value="navy">Navy</option>
+            </select>
+            <label for="colorPicker">Choose Your own color:</label>
+            <input type="color" id="colorPicker" name="colorPicker">
+          </fieldset>
+          <fieldset>
+            <legend>Feedback</legend>
+            <label for="feedback">Your Feedback:</label>
+            <br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
+            <br>
+            <label for="rating">Rate your experience:</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="3">
+          <fieldset>
+            <legend>Date and Time</legend>
+            <label for="datetime-local">Select a date:</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local" required>
+            <br>
+            <label for="date">Select a Month:</label>
+            <input type="month" id="month" name="month" required>
+            <br>
+            <label for="week">Select a Week:</label>
+            <input type="week" id="week" name="week" required>
+            <br>
+            <label for="time">Select a Time:</label>
+            <input type="time" id="time" name="time" required>
+          </fieldset>
+          <fieldset>
+            <legend>Newsletter Subscription</legend>
+            <label for="newsletter">Subscribe to newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes" selected>
+            <br>
+            <label for="newsletter">Don't subscribe:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="no">
+          </fieldset>
+          <fieldset>
+            <legend>Search in site</legend>
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Enter your search query">
+          </fieldset>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+        <p>
+          Here we have created a complex form that includes various input types and attributes. The form is structured using fieldsets and legends for better organization and accessibility. Each input field has a label associated with it, which improves usability for screen readers and other assistive technologies.
+        </p>
+        <p>
+          Working with tag <code>&lt;select&gt;</code> and <code>&lt;option&gt;</code> allows us to create dropdown menus. We can group tag <code>&lt;optgroup&gt;</code> to categorize options within the dropdown. But in nowadays Web developers  rarely use tag <code>&lt;optgroup&gt;</code> in their forms, because it's not a best practice. It's better to use tag <code>&lt;select&gt;</code> with tag <code>&lt;option&gt;</code> to create dropdown menus.
+        </p>
+        <p>
+          Remember! Use obligate attributes <code>required</code> and <code>placeholder</code> for input fields, to make your form more user-friendly. The <code>required</code> attribute ensures that the user must fill out the field before submitting the form, while the <code>placeholder</code> attribute provides a hint to the user about what information is expected in the field.
+        </p>
+      </article>
+    </section>
+    <section id="form_2">
+      <article>
+        <h2>Create another complex Form</h2>
+        <p>
+          Forms tags has a attribute: <code>disabled</code> and <code>readonly</code>. The <code>disabled</code> attribute prevents the user from interacting with the form control, while the <code>readonly</code> attribute allows the user to view the content but not modify it. These attributes can be useful for creating forms that require certain fields to be read-only or disabled based on specific conditions.
+        </p>
+        <p>
+          Why we need to use attribute <code>disabled</code>? If it is used, the data from the form will not be submitted to the server when the form is submitted. This can be useful for fields that are not relevant to the current user or situation, or for fields that are meant to be read-only.
+        </p>
+        <p>
+          When we use attribute <code>readonly</code>, the user can still interact with the field, but they cannot change its value. This can be useful for fields that display information that should not be modified, such as a user's name or email address.
+        </p>
+        <p>
+          What is a difference between <code>disabled</code> and <code>readonly</code>? The main difference is that a disabled field cannot be interacted with at all, while a read-only field can be viewed but not modified. This means that a disabled field will not be included in the form submission, while a read-only field will be included but cannot be changed by the user. If same tag has a disabled attribute, we cannot use focus on it, and it will not be submitted with the form. If same tag has a readonly attribute, we can focus on it, but we cannot change its value, and it will be submitted with the form.
+        </p>
+        <p>
+          Obligate attribute <code>placeholder</code> is used to provide a hint to the user about what information is expected in the field. It is displayed as a grayed-out text inside the input field until the user starts typing. This can help improve the user experience by providing guidance on what to enter in each field.
+        </p>
+        <p>
+          Attribute <code>inputmode</code> is used to specify the type of keyboard that should be displayed when the user interacts with the input field. This can be useful for fields that require specific types of input, such as numeric or email addresses. For example, if we set <code>inputmode="numeric"</code>, the user will see a numeric keypad when they focus on the input field. It is easy to use, especially on mobile devices, but it is not a best practice. It is better to use tag <code>&lt;input type="number"&gt;</code> for numeric input, or tag <code>&lt;input type="email"&gt;</code> for email input. Attribute <code>inputmode</code> has several values, such as <code>text</code>, <code>numeric</code>, <code>decimal</code>, <code>tel</code>, <code>email</code>, and <code>url</code>. Each value corresponds to a specific type of input that the user is expected to enter.
+        </p>
+        <p>
+          However, a better practice is to use the appropriate <code>&lt;input&gt;</code> type for the field, such as <code>type="text"</code>, <code>type="number"</code>, or <code>type="email"</code>. This ensures that the correct keyboard is displayed on mobile devices and provides better validation for the input. Also, if we use attribute <code>type</code> users cannot enter invalid data, such as letters in a numeric field or special characters in an email field. This helps to ensure that the data entered by the user is valid and can be processed correctly by the server. But if we use attribute <code>inputmode</code>, users can enter invalid data, such as letters in a numeric field or special characters in an email field. This can lead to errors and inconsistencies in the data submitted by the user.
+        </p>
+        <p>
+          Attribute <code>autocomplete</code> is used to specify whether the browser should automatically fill in the field with previously entered values. This can be useful for fields that are frequently used, such as email addresses or usernames. The <code>autocomplete</code> attribute can have several values, such as <code>on</code>, <code>off</code>, <code>name</code>, <code>email</code>, <code>username</code>, and more. Each value corresponds to a specific type of input that the user is expected to enter. It is easy to use, when we open some site with form many times and browser remembers our data, and we can use it again. But it is not a best practice. It is better to use attribute <code>autocomplete</code> with value <code>off</code>, to prevent the browser from automatically filling in the field with previously entered values. This ensures that the user has to enter the data manually, which can help to prevent errors and inconsistencies in the data submitted by the user.
+        </p>
+        <p>
+          Important! In attributes <code>name</code> and <code>id</code> we must use unique values for each form control. This is important for several reasons:
+          <ul>
+            <li>
+              Accessibility: Unique values for <code>name</code> and <code>id</code> attributes help screen readers and other assistive technologies to identify and navigate through the form controls.
+            </li>
+            <li>
+              JavaScript: If we want to manipulate the form controls using JavaScript, unique values for <code>name</code> and <code>id</code> attributes are essential for selecting the correct element.
+            </li>
+            <li>
+              Form Submission: When the form is submitted, the server expects unique names for each form control to correctly process the data.
+            </li>
+          </ul>
+        </p>
+        <p>
+          How we can these unique values? We can open some documentation about reserved words in HTML, and use them as unique values for <code>name</code> and <code>id</code> attributes. For example, we can use <code>userName</code>, <code>userEmail</code>, <code>userAge</code>, etc. This will help us to avoid conflicts with other form controls and ensure that the form works correctly.
+        </p>
+        <p>
+          We can use the attribute <code>autofocus</code> to automatically focus on a specific input field when the page loads. This can be useful for improving the user experience by allowing users to start typing without having to click on the input field first. When we are open some page who has interactive elements, such as forms, links or buttons, the browser will automatically focus on the first input field with the <code>autofocus</code> attribute. In Google Chrome we see blue 1px border around the interactive element. 
+        </p>
+        <p>
+          We know about status: focus. It is used to all interactive elements in pages. We can navigate through the interactive elements on a page using the <code>Tab</code> key. When we press the <code>Tab</code> key, the browser will move the focus to the next interactive element on the page. If we want to skip some interactive elements, we can use the <code>Shift + Tab</code> key combination to move the focus to the previous interactive element. We can press the <code>Enter</code> key to activate the focused element, such as a button or a link. This allows users to interact with the page without using a mouse or touchpad, which can be especially useful for users with disabilities or those who prefer keyboard navigation.
+        </p>
+        <p>
+          Forms tag <code>&lt;label&gt;</code> has a <code>for</code> attribute, which is used to associate the label with a specific form control. This is important for accessibility, as it allows screen readers to correctly identify the label for the form control. When we click on the label, the browser will automatically focus on the associated form control, making it easier for users to interact with the form.
+        </p>
+        <p>
+          In tag <code>&lt;input</code> we can use attribute <code>form</code> to specify the form to which the input element belongs. This is particularly useful for input elements that are not contained within a <code>&lt;form&gt;</code> element but still need to be submitted with a specific form. By using the <code>form</code> attribute, we can associate the input element with the desired form by referencing the form's <code>id</code>. We can connect the input element who isn't inside the <code>&lt;form</code> tag. We use this attribute to get as possible to send data to the server.
+        </p>
+        <p>
+          Important! If, we use attribute <code>form</code> in tag <code>&lt;input&gt;</code>, we must use the <code>id</code> attribute in the <code>&lt;form&gt;</code> tag to specify the form to which the input element belongs. The value of the <code>form</code> attribute in the <code>&lt;input&gt;</code> tag should match the <code>id</code> of the <code>&lt;form&gt;</code> tag. This allows us to connect the input element to a form that is not directly contained within the <code>&lt;form&gt;</code> tag.
+        </p>
+        <p>
+          Important! Don't confuse tag <code>&lt;form&gt;</code> with the attribute <code>form</code> in tag <code>&lt;input&gt;</code>. The <code>&lt;form&gt;</code> tag is used to create a form, while the <code>form</code> attribute in the <code>&lt;input&gt;</code> tag is used to associate the input element with a specific form. The <code>&lt;form&gt;</code> tag is a container for all form controls, while the <code>form</code> attribute in the <code>&lt;input&gt;</code> tag allows us to connect an input element to a form that is not directly contained within the <code>&lt;form&gt;</code> tag.
+        </p>
+        <p>
+          Tag <code>&lt;input&gt;</code> has attributes <code>minlength</code> and <code>maxlength</code>, which are used to specify the minimum and maximum length of text that can be entered into the input field. This is useful for validating user input and ensuring that it meets certain criteria before being submitted.
+        </p>
+        <p>
+          Look for at specific attribute in tag <code>&lt;input&gt;</code>:size. The <code>size</code> attribute specifies the width of the input field in characters. This can be useful for controlling the appearance of the input field and ensuring that it is large enough to accommodate the expected input. However, it is not a best practice to use the <code>size</code> attribute, as it does not provide a consistent user experience across different devices and screen sizes. Instead, it is better to use CSS to control the width of the input field.
+        </p>
+        <p>
+          But in tag <code>&lt;select&gt;</code> attribute <code>size</code> is used to specify the number of visible options in a dropdown menu. This can be useful for creating a multi-select dropdown where users can select multiple options at once. The <code>size</code> attribute can have a value greater than 1, which will display the specified number of options in the dropdown menu without requiring the user to click on it.
+        </p>
+
+        
+        <h2>Create second Form</h2>
+        <p>Create a big, difficult form considering used all forms tags and attributes</p>
+        <form>
+          <fieldset>
+            <legend>About You</legend>
+          </fieldset>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+        <p>
+          Here we have created another complex form that includes various input types and attributes. The form is structured using fieldsets and legends for better organization and accessibility. Each input field has a label associated with it, which improves usability for screen readers and other assistive technologies.
+        </p>
+      </article>
+    </section>
+  </main>
+  <footer>
+   <div>
+    <p>
+      Page footer
+    </p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#about">About Forms</a>
+        </li>
+        <li>
+          <a href="#form_1">Form 1</a>
+        </li>
+        <li>
+          <a href="#form_2">Form 2</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <a href="#up">Go Up</a>
+      <p>
+        &copy; 2023 Homework 12
+      </p>
+    </div>
+   </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>
