@@ -74,9 +74,9 @@
         </p>
       </article>
     </section>
-    <section id="form_1">
+    <section>
       <article>
-        <h2>Create difficult Form</h2>
+        <h2 id="form_1">Create difficult Form</h2>
         <p>
           Here we will create a more complex form that includes various input types and attributes. This form will demonstrate how to use the <code>&lt;select&gt;</code> tag for dropdown menus, the <code>&lt;input&gt;</code> tag for different input types, and the <code>&lt;label&gt;</code> tag for better accessibility.
         </p>
@@ -108,9 +108,9 @@
             <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
           </fieldset>
           <fieldset>
-            <legend>Your interests</legend>
-            <label for="interests">Select your interests:</label>
-            <select id="interests" name="interests" multiple required>
+            <legend>Your hobby</legend>
+            <label for="hobby">Select your hobby:</label>
+            <select id="hobby" name="hobby" required>
               <option value="" disabled selected>Nothing selected</option>
               <option value="coding">Coding</option>
               <option value="design">Design</option>
@@ -118,18 +118,21 @@
               <option value="sports">Sports</option>
             </select>
             <br>
-            <label for="other_interests">Other interests:</label>
-            <input type="text" id="other_interests" name="other_interests" placeholder="Enter your interests">
+            <label for="other_hobby">Other hobbies:</label>
+            <input type="text" id="other_hobby" name="other_hobby" placeholder="Enter your hobbies">
           </fieldset>
           <fieldset>
             <legend>Preferences</legend>
             <label for="gender">Gender:</label>
-            <select id="gender" name="gender" required>
-              <option value="" selected disabled>Select your gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
+            <br>
+            <input type="radio" id="gender_male" name="gender" value="male" required>
+            <label for="gender_male">Male</label>
+            <br>
+            <input type="radio" id="gender_female" name="gender" value="female" required>
+            <label for="gender_female">Female</label>
+            <br>
+            <input type="radio" id="gender_other" name="gender" value="other" required>
+            <label for="gender_other">Other</label>
             <br>
             <label for="country">Country:</label>
             <select id="country" name="country" required>
@@ -160,8 +163,10 @@
             <input type="text" id="userBio" name="userBio" placeholder="Enter your user bio">
             <br>
             <label for="userJob">Are You a programmer?</label>
+            <br>
             <input type="radio" id="userJobYes" name="userJob" value="yes" required>
             <label for="userJobYes">Yes</label>
+            <br>
             <input type="radio" id="userJobNo" name="userJob" value="no" required>
             <label for="userJobNo">No</label>
             <br>
@@ -188,6 +193,7 @@
               <option value="teal">Teal</option>
               <option value="navy">Navy</option>
             </select>
+            <br>
             <label for="colorPicker">Choose Your own color:</label>
             <input type="color" id="colorPicker" name="colorPicker">
           </fieldset>
@@ -198,7 +204,9 @@
             <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
             <br>
             <label for="rating">Rate your experience:</label>
+            <br>
             <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="3">
+          </fieldset>
           <fieldset>
             <legend>Date and Time</legend>
             <label for="datetime-local">Select a date:</label>
@@ -216,7 +224,7 @@
           <fieldset>
             <legend>Newsletter Subscription</legend>
             <label for="newsletter">Subscribe to newsletter:</label>
-            <input type="checkbox" id="newsletter" name="newsletter" value="yes" selected>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked>
             <br>
             <label for="newsletter">Don't subscribe:</label>
             <input type="checkbox" id="newsletter" name="newsletter" value="no">
@@ -240,7 +248,7 @@
         </p>
       </article>
     </section>
-    <section id="form_2">
+    <section>
       <article>
         <h2>Create another complex Form</h2>
         <p>
@@ -311,15 +319,253 @@
         <p>
           But in tag <code>&lt;select&gt;</code> attribute <code>size</code> is used to specify the number of visible options in a dropdown menu. This can be useful for creating a multi-select dropdown where users can select multiple options at once. The <code>size</code> attribute can have a value greater than 1, which will display the specified number of options in the dropdown menu without requiring the user to click on it.
         </p>
-
-        
-        <h2>Create second Form</h2>
+        <p>
+          Form tags <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> has a specific attribute <code>pattern</code>, which is used to specify a regular expression that the input value must match in order to be considered valid. This is useful for enforcing specific input formats, such as email addresses or phone numbers. In attribute <code>pattern</code> we can use regular expressions to define the expected format of the input value. For example, we can use the pattern <code>^[a-zA-Z0-9]+$</code> to allow only alphanumeric characters in the input field. If the input value does not match the specified pattern, the form will not be submitted, and an error message will be displayed to the user.
+        </p>
+        <p>
+          Also, we can use the <code>oninvalid</code> event handler to customize the validation feedback for users. This event is triggered when a form control fails to validate, allowing us to display a custom error message or take other actions to assist the user. In this attribute value we can use JavaScript code to handle the invalid input. For example, we can use the <code>oninvalid</code> event handler to display a custom error message when the user enters an invalid value in the input field. This can help to improve the user experience by providing clear feedback on what went wrong and how to fix it. We will learn more about this, when start to learn JavaScript.
+        </p>
+        <p>
+          Form tags <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code> has a specific attribute <code>spellcheck</code>, which is used to enable or disable spell checking for the input field. This can be useful for ensuring that users enter text without spelling errors, especially in fields where accuracy is important, such as email addresses or names. The <code>spellcheck</code> attribute can have a value of <code>true</code> or <code>false</code>. If set to <code>true</code>, the browser will check the spelling of the input text and provide suggestions for corrections. If set to <code>false</code>, spell checking will be disabled for the input field. This attribute values can be used to control the behavior of spell checking in the input field. For example, we can use the <code>spellcheck="true"</code> attribute to enable spell checking for the input field, or <code>spellcheck="false"</code> to disable it.
+        </p>
+        <p>
+          Form has a attribute <code>novalidate</code>, which is used to disable the browser's default form validation. This can be useful when we want to implement custom validation logic using JavaScript or when we want to submit the form without validating the input fields. When the <code>novalidate</code> attribute is present, the browser will not perform any validation on the form controls before submitting the form. This means that even if required fields are empty or if the input values do not match the specified patterns, the form will still be submitted. However, it is important to note that disabling validation can lead to invalid data being submitted to the server, so it should be used with caution. We used this attribute, when the form validation is handled by JavaScript or when we want to submit the form without validating the input fields. This can be useful for forms that require complex validation logic or for forms that need to be submitted without any validation.
+        </p>
+        <p>
+          Form tag <code>&lt;textarea&gt;</code> has two attributes: <code>rows</code> and <code>cols</code>. The <code>rows</code> attribute specifies the number of visible text lines in the textarea, while the <code>cols</code> attribute specifies the width of the textarea in characters. These attributes can be used to control the size of the textarea and ensure that it is large enough to accommodate the expected input. But, the best practice is to use CSS to control the size of the textarea, rather than using the <code>rows</code> and <code>cols</code> attributes. This ensures that the textarea is responsive and adapts to different screen sizes and devices.
+        </p>
+        <p>
+          Textarea attribute <code>wrap</code> is used to specify how the text in the textarea should be wrapped. The <code>wrap</code> attribute can have two values: <code>soft</code> and <code>hard</code>. If set to <code>soft</code>, the text will wrap at the end of the line without inserting line breaks. If set to <code>hard</code>, the text will wrap at the end of the line and insert line breaks. This can be useful for controlling how the text is displayed in the textarea and ensuring that it is easy to read and edit. It works with the <code>cols</code> attribute. It ads line breaks to the text in the textarea based on the specified width. This can be useful for ensuring that the text is displayed correctly and is easy to read. However, it is not a best practice to use the <code>wrap</code> attribute, as it does not provide a consistent user experience across different devices and screen sizes. Instead, it is better to use CSS to control the wrapping of text in the textarea.
+        </p>
+        <p>
+          That's all about forms tags and attributes, which we have learned in the previous homework. Now we can create two complex forms with different input types and attributes.
+        </p>
+        <h3>End of a deep dive into HTML forms</h3>
+        <h2 id="form_2">Create second Form</h2>
         <p>Create a big, difficult form considering used all forms tags and attributes</p>
-        <form>
+        <form action="https://example.com/submit" method="POST">
           <fieldset>
             <legend>About You</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required placeholder="Enter your surname">
+            <br>
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" required placeholder="Enter your username">
+            <br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required placeholder="Enter your age">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required minlength="10" maxlength="15" inputmode="tel">
+            <br>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="Enter your website URL">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8" maxlength="20" inputmode="text">
+            <br>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
           </fieldset>
-
+          <fieldset>
+            <legend>Your Hobby</legend>
+            <label for="hobby">Select your hobby:</label>
+            <select id="hobby" name="hobby" required>
+              <option value="" disabled selected>Nothing selected</option>
+              <option value="reading">Reading</option>
+              <option value="gaming">Gaming</option>
+              <option value="traveling">Traveling</option>
+              <option value="cooking">Cooking</option>
+              <option value="photography">Photography</option>
+              <option value="sports">Sports</option>
+              <option value="music">Music</option>
+              <option value="art">Art</option>
+              <option value="writing">Writing</option>
+              <option value="dancing">Dancing</option>
+              <option value="gardening">Gardening</option>
+              <option value="crafting">Crafting</option>
+              <option value="fitness">Fitness</option>
+              <option value="hiking">Hiking</option>
+              <option value="fishing">Fishing</option>
+              <option value="hunting">Hunting</option>
+              <option value="collecting">Collecting</option>
+            </select>
+            <br>
+            <label for="other_hobby">Other hobbies:</label>
+            <input type="text" id="other_hobby" name="other_hobby" placeholder="Enter your hobbies" spellcheck="true">
+          </fieldset>
+          <fieldset>
+            <legend>Preferences</legend>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="gender_male" name="gender" value="male" required checked>
+            <label for="gender_male">Male</label>
+            <br>
+            <input type="radio" id="gender_female" name="gender" value="female" required>
+            <label for="gender_female">Female</label>
+            <br>
+            <input type="radio" id="gender_other" name="gender" value="other" required>
+            <label for="gender_other">Other</label>
+            <br>
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="" selected disabled>Select your country</option>
+              <option value="usa">USA</option>
+              <option value="canada">Canada</option>
+              <option value="mexico">Mexico</option>
+              <option value="europe">Europe</option>
+              <option value="uk">UK</option>
+              <option value="australia">Australia</option>
+            </select>
+            <br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            <br>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter your state" required>
+            <br>
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip" placeholder="Enter your ZIP code" required>
+          </fieldset>
+          <fieldset>
+            <legend>More about You</legend>
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" placeholder="Enter your user name" required>
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="gender_male" name="gender" value="male" required checked>
+            <label for="gender_male">Male</label>
+            <br>
+            <input type="radio" id="gender_female" name="gender" value="female" required>
+            <label for="gender_female">Female</label>
+            <br>
+            <input type="radio" id="gender_other" name="gender" value="other" required>
+            <label for="gender_other">Other</label>
+            <br>
+            <label for="bio">Tell us about yourself:</label>
+            <br>
+            <textarea id="bio" name="bio" rows="4" placeholder="Enter a brief bio" spellcheck="true" rows="10" cols="40"></textarea>
+            <br>
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".jpg, .jpeg, .png, .pdf">
+          </fieldset>
+          <fieldset>
+            <legend>Additional Information</legend>
+            <label for="userInterest">Do you like technologies?</label>
+            <input type="radio" id="userInterestYes" name="userInterest" value="yes" required checked>
+            <label for="userInterestYes">Yes</label>
+            <input type="radio" id="userInterestNo" name="userInterest" value="no" required>
+            <label for="userInterestNo">No</label>
+            <br>
+            <label for="colorPicker">Choose Your favorite color:</label>
+            <select name="color" id="color" required>
+              <option value="" selected disabled>Nothing selected</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="yellow">Yellow</option>
+              <option value="purple">Purple</option>
+              <option value="orange">Orange</option>
+              <option value="pink">Pink</option>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="gray">Gray</option>
+              <option value="brown">Brown</option>
+              <option value="cyan">Cyan</option>
+              <option value="magenta">Magenta</option>
+              <option value="lime">Lime</option>
+              <option value="teal">Teal</option>
+              <option value="navy">Navy</option>
+            </select>
+            <br>
+            <label for="colorPicker">Choose Your own color:</label>
+            <input type="color" id="colorPicker" name="colorPicker">
+          </fieldset>
+          <fieldset>
+            <legend>Feedback</legend>
+            <label for="feedback">Your Feedback:</label>
+            <br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
+            <br>
+            <label for="rating">Rate your experience:</label>
+            <br>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="3">
+          </fieldset>
+          <fieldset>
+            <legend>Date and Time</legend>
+            <label for="datetime-local">Select a date:</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local" required>
+            <br>
+            <label for="date">Select a Month:</label>
+            <input type="month" id="month" name="month" required>
+            <br>
+            <label for="week">Select a Week:</label>
+            <input type="week" id="week" name="week" required>
+            <br>
+            <label for="time">Select a Time:</label>
+            <input type="time" id="time" name="time" required>
+          </fieldset>
+          <fieldset>
+            <legend>Your family</legend>
+            <label for="areMarried">Are you married?</label>
+            <br>
+            <input type="radio" id="areMarriedYes" name="areMarried" value="yes" required>
+            <label for="areMarriedYes">Yes</label>
+            <br>
+            <input type="radio" id="areMarriedNo" name="areMarried" value="no" required checked>
+            <label for="areMarriedNo">No</label>
+            <br>
+            <label for="children">Do you have children?</label>
+            <input type="checkbox" id="children" name="children" value="yes" checked>
+            <label for="children">Yes</label>
+            <br>
+            <input type="checkbox" id="noChildren" name="children" value="no">
+            <label for="noChildren">No</label>
+            <br>
+            <label for="pets">Do you have pets?</label>
+            <input type="checkbox" id="pets" name="pets" value="yes" checked>
+            <label for="pets">Yes</label>
+            <br>
+            <input type="checkbox" id="noPets" name="pets" value="no">
+            <label for="noPets">No</label>
+            <br>
+            <label for="petsType">If yes, what kind of pets do you have?</label>
+            <input type="text" id="petsType" name="petsType" placeholder="Enter the type of your pets">
+            <br>
+            <label for="petsCount">How many pets do you have?</label>
+            <select id="petsCount" name="petsCount">
+              <option value="" selected disabled>Select the number of pets</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="more">More than 10</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Newsletter Subscription</legend>
+            <label for="newsletter">Subscribe to newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked>
+            <br>
+            <label for="newsletter">Don't subscribe:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="no">
+          </fieldset>
+          <fieldset>
+            <legend>Search in site</legend>
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Enter your search query">
+          </fieldset>
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
         </form>
