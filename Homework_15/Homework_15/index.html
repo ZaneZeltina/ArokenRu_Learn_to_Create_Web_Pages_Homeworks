@@ -8,12 +8,160 @@
   <title>Homework 15</title>
 </head>
 <body>
-  <main>
-    <section>
-
+  <header class="header">
+    <div class="logo">  
+      <a class="logo__link" href="#">
+        <img class="logo__img" src="img/logo.png" alt="logo" style="width: 50px; height: 50px;">
+      </a>
+    </div>
+    <h1 id="up" class="page__title">
+      A little of HTML Attributes
+    </h1>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#attributes">About Attributes</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#task_1">Task: Nr. 1</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section id="attributes">
+      <div class="about">
+        <h2 class="about__title">
+          About Attributes
+        </h2>
+        <p class="about__text">
+          Today we will look at the some attributes in HTML. Attributes provide additional information about HTML elements and are always specified in the start tag. They come in name/value pairs like this: name="value".
+        </p>
+        <p class="about__text">
+          Attribute: <code>id</code> is used to uniquely identify an element in the document. It can be used for styling with CSS or for scripting with JavaScript. Important! The value of the id attribute must be unique within the document. For example, <code>&lt;div id="uniqueElement"&gt;Content&lt;/div&gt;</code>. Important! Attribute: <code>id</code> name can't be a number. Also, it can't start with number. but, it can contain numbers in the middle or at the end of the name. For example, <code>id="element1"</code> is valid, but <code>id="1element"</code> is not valid.
+        </p>
+        <p class="about__text">
+          We all know that the <code>class</code> attribute is used to assign one or more class names to an element. These class names can be used by CSS and JavaScript to apply styles or manipulate the element. For example, <code>&lt;span class="highlight"&gt;Highlighted Text&lt;/span&gt;</code>. Unlike attribute <code>id</code>, the value of the class attribute does not have to be unique. Multiple elements can share the same class name, allowing for bulk styling or scripting.
+        </p>
+        <p class="about__text">
+          Sometimes, we need to use attribute <code>title</code> to provide additional information about an element. This information is typically displayed as a tooltip when the user hovers over the element. For example, <code>&lt;a href="#" title="This is a link"&gt;Link&lt;/a&gt;</code>. But, in nowadays in web development, the <code>title</code> attribute is often used less frequently, as other methods such as ARIA attributes or JavaScript tooltips provide more flexibility and control over the user experience.
+        </p>
+        <p class="about__text">
+          Sometimes we need to use attribute: <code>style</code> to apply inline CSS styles directly to an element. This allows for quick styling without the need for external or internal stylesheets. For example, <code>&lt;div style="color: red; font-size: 20px;"&gt;Styled Text&lt;/div&gt;</code>. However, it's generally recommended to use external stylesheets for better maintainability and separation of concerns. Important! The <code>style</code> attribute should not be used for large-scale styling, as it can lead to code that is difficult to read and maintain. For that, we should use external CSS files or internal stylesheets within the <code>&lt;style&gt;</code> tag in the document's head section.
+        </p>
+      </div>
+    </section>
+    <article class="about-homework">
+      <div class="homework-about">
+        <h2 class="homework-about__title">
+          Create Semantic page with attributes
+        </h2>
+        <p class="homework-about__text">
+          In this homework, you will create a simple semantic HTML page using the attributes we discussed. The page should include a header, main content area, and footer. Use the <code>id</code>, <code>class</code>, <code>title</code> attributes. 
+        </p>
+      </div>
+    </article>
+    <section id="task_1">
+      <header class="header">
+        <div class="logo">
+          <a class="logo__link" href="#">
+            <img class="logo__img" src="img/logo.png" alt="logo" style="width: 50px; height: 50px;">
+          </a>
+        </div>
+        <h2 class="task__title">
+          Homework: Nr. 15
+        </h2>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#attributes">About Attributes</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#task_1">Task: Nr. 1</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <aside class="page__aside">
+          <div class="aside__navigation">
+            <h3 class="aside__title">
+              I am page aside
+            </h3>
+            <ul class="aside__menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#attributes">About Attributes</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#task_1">Task: Nr. 1</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#up">Go Up</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <div class="main__block">
+          <h2 class="block__title">
+            Task: Nr. 1 - Create a Semantic Page
+          </h2>
+          <h3 class="block__subtitle">
+            First block with Lorem Ipsum texts
+          </h3>
+          <p class="block__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorum, qui voluptas a eius, deserunt tempora eveniet amet eligendi fuga sunt magni reiciendis nesciunt odio esse minima asperiores accusantium? Ipsam aliquid id quod fugit cupiditate distinctio in nobis, asperiores iure illum, quis quaerat magni! Ut labore nesciunt dolores fugit animi.
+          </p>
+          <p class="block__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corrupti pariatur officiis aperiam dolore, inventore fugiat similique quaerat quod eos sint dolorem a voluptas nam, sit accusamus iusto. Quae dolorem at alias fuga tempora quo. Harum ea perferendis dolorum cumque!
+          </p>
+          <p class="block__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempore molestias voluptate nesciunt facere facilis magni! Soluta odio aliquam modi expedita sapiente vero, placeat enim! Saepe rem rerum, reprehenderit dolor neque odit dignissimos soluta in cupiditate, impedit praesentium ut? Dolorem.
+          </p>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="footer__text">I'm a homework footer</p>
+        <div class="logo">
+          <a class="logo__link" href="#">
+            <img class="logo__img" src="img/logo.png" alt="logo" style="width: 50px; height: 50px;">
+          </a>
+        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#attributes">About Attributes</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#task_1">Task: Nr. 1</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__text">
+          &copy; End of task 1 - Homework 15 2025
+        </p>
+      </footer>
     </section>
   </main>
- <footer>
+ <footer class="footer">
+  <p class="footer__text">I'm a main page footer</p>
+  <div class="logo">
+    <a class="logo__link" href="#">
+      <img class="logo__img" src="img/logo.png" alt="logo" style="width: 50px; height: 50px;">
+    </a>
+  </div>
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a class="menu__link" href="#attributes">About Attributes</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#task_1">Task: Nr. 1</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="navigation">
+    <a class="navigation__link" href="#up">Go Up</a>
+  </div>
   <p>&copy; 2025 Homework 15 - Attributes in HTML</p>
  </footer>
   <script src="js/main.js"></script>
