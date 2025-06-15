@@ -16,12 +16,15 @@
       </a>
     </div>
     <h1 id="up" class="page__title">
-      Vector graphics and SVG
+      graphic types in web development
     </h1>
     <nav class="menu">
       <ul class="menu__list">
         <li class="menu__item">
-          <a class="menu__link" href="#about">About Vector Graphics</a>
+          <a class="menu__link" href="#vectors">About Vector Graphics</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#raster">About Raster Graphics</a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="#task_1">Task: Nr. 1</a>
@@ -32,29 +35,111 @@
 
   <main class="main">
 
-    <section id="about">
-      <div class="vectorgraphics">
-        <h2 class="vectorgraphics__title">
+    <section id="vectors">
+      <div class="vector-graphics">
+        <h2 class="vector-graphics__title">
           About Vector Graphics
         </h2>
-        <p class="vectorgraphics__text">
+        <p class="vector-graphics__text">
           Vector graphics are images created using mathematical formulas to define shapes, lines, and colors. Unlike raster graphics, which are made up of pixels, vector graphics can be scaled infinitely without losing quality. This makes them ideal for logos, icons, and illustrations.
         </p>
-        <p class="vectorgraphics__text">
+        <p class="vector-graphics__text">
+          Vector graphics formats include SVG (Scalable Vector Graphics), EPS (Encapsulated PostScript), and PDF (Portable Document Format). These formats are widely used in web development and graphic design because they allow for high-quality images that can be resized without any loss of detail. <mark>Important!</mark> PNG is not a Vector graphics format. It is a Raster graphics file format.
+        </p>
+        <p class="vector-graphics__text">
+          <mark>Important!</mark> PNG is not a Vector graphics format. It is a Raster graphics file format.
+        </p>
+        <p class="vector-graphics__text">
           SVG (Scalable Vector Graphics) is a widely used format for vector graphics on the web. It is an XML-based format that allows for the creation of two-dimensional vector graphics. SVG images can be created and edited with any text editor, and they can be styled with CSS and manipulated with JavaScript.
         </p>
-        <p class="vectorgraphics__text">
+        <p class="vector-graphics__text">
           One of the key advantages of SVG is its scalability. Because SVG images are defined in terms of shapes and paths, they can be resized without any loss of quality. This makes them perfect for responsive web design, where images need to adapt to different screen sizes.
         </p>
-        <p class="vectorgraphics__text">
+        <p class="vector-graphics__text">
           Sometimes, we need to use attribute <code>title</code> to provide additional information about an element. This information is typically displayed as a tooltip when the user hovers over the element. For example, <code>&lt;a href="#" title="This is a link"&gt;Link&lt;/a&gt;</code>. But, in nowadays in web development, the <code>title</code> attribute is often used less frequently, as other methods such as ARIA attributes or JavaScript tooltips provide more flexibility and control over the user experience.
+        </p>
+        <p class="vector-graphics__text">
+          If we use Vector graphics, we can easy change size, color, and other properties of the image without losing quality, and we don't loose image quality This is particularly useful for responsive web design, where images need to adapt to different screen sizes and resolutions.
+        </p>
+        <p class="vector-graphics__text">
+          If we use Vector graphics, the image weight is usually smaller than raster images. This is because vector graphics are based on mathematical equations rather than a fixed grid of pixels, allowing for more efficient storage and rendering. As a result, vector images can be scaled up or down without losing quality, making them ideal for web development where performance and loading times are crucial.
+        </p>
+        <p class="vector-graphics__text">
+          If we use Vector graphics, we can easily add animations and interactivity to our images. This is because vector graphics are based on mathematical equations, which allows for smooth scaling and transformation without losing quality. Additionally, SVG (Scalable Vector Graphics) is a widely used format for vector graphics on the web, which supports animations and interactivity through CSS and JavaScript.
+        </p>
+        <p class="vector-graphics__text">
+          We can replace SVG images with PNG format. Important! We can't replace SVG or PNG images with JPEG format, because JPEG is a raster image format and does not support vector graphics. Raster images are made up of pixels, which means they lose quality when resized, while vector images are based on mathematical equations and can be scaled without losing quality.
+        </p>
+        <p class="vector-graphics__text">
+          <mark>Important!</mark> We can't replace PNG or JPEG images with SVG format, because PNG and JPEG are raster image formats, while SVG is a vector image format. Raster images are made up of pixels, which means they lose quality when resized, while vector images are based on mathematical equations and can be scaled without losing quality.
+        </p>
+        <p class="vector-graphics__text">
+          Usually, SVG images are used for logos, icons, and illustrations that require hight quality and scalability.
+        </p>
+        <p class="vector-graphics__text">
+          How we can use Vector graphics in HTML document? We can use SVG images in HTML documents by embedding them directly into the HTML code using the <code>&lt;svg&gt;</code> element or by linking to an external SVG file using the <code>&lt;img&gt;</code> element or the <code>&lt;object&gt;</code> element. For example, to embed an SVG image directly into the HTML code, we can use the SVG element code.
+        </p>
+        <p class="vector-graphics__text">
+          If we use Vector graphics in HTML document by code, we can use the <code>&lt;svg&gt;</code> element to define the SVG image and its properties. For example, we can set the width and height of the SVG image using the <code>width</code> and <code>height</code> attributes, and we can define the shapes and colors of the image using SVG elements such as <code>&lt;circle&gt;</code>, <code>&lt;rect&gt;</code>, and <code>&lt;path&gt;</code>. Additionally, we can use CSS to style the SVG image and add animations or interactivity. we can change the color and create animations using CSS. For example, we can use the <code>fill</code> property to change the color of a shape, and we can use the <code>transition</code> property to create smooth animations when the shape is hovered over or clicked.
+        </p>
+        <p class="vector-graphics__text">
+          But, if we add a Vector graphics by tag <code>&lt;img&gt;</code>, we can't change the color or create animations using CSS. This is because the <code>&lt;img&gt;</code> tag treats the SVG image as a static image, similar to a raster image like PNG or JPEG. To change the color or create animations, we need to embed the SVG code directly into the HTML document using the <code>&lt;svg&gt;</code> element.
+        </p>
+      </div>
+    </section>
+
+    <section id="raster">
+      <div class="raster-graphics">
+        <h2 class="raster-graphics__title">
+          About Raster Graphics
+        </h2>
+        <p class="raster-graphics__text">
+          Raster graphics, also known as bitmap images, are composed of a grid of individual pixels. Each pixel has a specific color value, and when combined, they create the overall image. Common raster formats include JPEG, PNG, GIF, WEBP and BMP.
+        </p>
+        <p class="raster-graphics__text">
+          Unlike vector graphics, raster images do not scale well. When you enlarge a raster image, it can become pixelated or blurry because the individual pixels become more visible. This is why raster graphics are often used for photographs and detailed images where high resolution is important.
+        </p>
+        <p class="raster-graphics__text">
+          Raster graphics are widely used in web development for images that require complex color gradients and detailed textures. However, they are not suitable for logos or icons that need to be resized frequently.
+        </p>
+        <p class="raster-graphics__text">
+          When using raster graphics, it's important to choose the right format for your needs. For example, JPEG is great for photographs, while PNG is better for images with transparency. WEBP is a modern format that provides better compression and quality compared to JPEG and PNG.
+        </p>
+        <p class="raster-graphics__text">
+          In web development, raster images are often optimized for faster loading times. This can be done by compressing the image files, reducing their dimensions, or using responsive images that adapt to different screen sizes.
+        </p>
+        <p class="raster-graphics__text">
+          If we use Raster graphics and we want to change the size of the image, we can do it, but we will loose image quality. This is because raster images are made up of a fixed number of pixels, and when we resize them, the pixels are either added or removed, which can result in a loss of detail and clarity.
+        </p>
+        <p class="raster-graphics__text">
+          If we use Raster graphics, the image weight is usually larger than vector images. This is because raster images are made up of a fixed number of pixels, and the more pixels there are, the larger the file size. Additionally, raster images often contain more color information and detail, which can also contribute to a larger file size. If we want to edit Raster graphics files, we must to use specialized software such as Adobe Photoshop or GIMP.
+        </p>
+        <p class="raster-graphics__text">
+          Usually, Raster graphics are used for photographs, detailed images, and complex color gradients. They are used everywhere, where is a page content. We use it for: content pictures, photos, backgrounds. They are not suitable for logos or icons that need to be resized frequently, as they do not scale well and can become pixelated or blurry when enlarged.
         </p>
       </div>
     </section>
 
     <section id="task_1">
-    </section>
+      <div class="homework">
+        <h3 class="homework__title">
+          Add Vector and Raster images to the page
+        </h3>
+        <p class="homework__text">
+          In this task, we will add both vector and raster images to the page. We will use an SVG image for the vector graphics and a PNG image for the raster graphics. The SVG image will be embedded directly into the HTML code, while the PNG image and JPEG will be linked using the <code>&lt;img&gt;</code> tag.
+        </p>
+        
+        <div class="vector-images">
+          <h4 class="vector-images__title">
+            Add Vector Images
+          </h4>
+          
+        </div>
 
+        <div class="raster-images"></div>
+
+      </div>
+    </section>
   </main>
 
  <footer class="footer">
@@ -67,7 +152,10 @@
   <nav class="menu">
     <ul class="menu__list">
       <li class="menu__item">
-        <a class="menu__link" href="#about">About Vector Graphics</a>
+        <a class="menu__link" href="#vectors">About Vector Graphics</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#raster">About Raster Graphics</a>
       </li>
       <li class="menu__item">
         <a class="menu__link" href="#task_1">Task: Nr. 1</a>
