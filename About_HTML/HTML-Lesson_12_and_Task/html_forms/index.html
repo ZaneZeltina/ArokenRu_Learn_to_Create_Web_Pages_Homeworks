@@ -118,10 +118,10 @@
             <input type="text" id="age" name="age" placeholder="Enter your age" required>
             <br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="email" id="emailAddress" name="email" placeholder="Enter your email" required>
             <br>
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <label for="phoneNumber"></label><input type="tel" id="phoneNumber" name="phone" placeholder="Enter your phone number" required>
             <br>
             <label for="website">Website:</label>
             <input type="url" id="website" name="website" placeholder="Enter your website URL">
@@ -243,13 +243,14 @@
             <br>
             <label for="rating">Rate your experience:</label>
             <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="3">
+            </fieldset>
           <fieldset>
             <legend>Date and Time</legend>
             <label for="datetime-local">Select a date:</label>
             <input type="datetime-local" id="datetime-local" name="datetime-local" required>
             <br>
             <label for="date">Select a Month:</label>
-            <input type="month" id="month" name="month" required>
+            <label for="month"></label><input type="month" id="month" name="month" required>
             <br>
             <label for="week">Select a Week:</label>
             <input type="week" id="week" name="week" required>
@@ -260,10 +261,10 @@
           <fieldset>
             <legend>Preferences</legend>
             <label for="newsletter">Subscribe to newsletter:</label>
-            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <label for="magazine"></label><input type="checkbox" id="magazineYes" name="newsletter" value="yes">
             <br>
             <label for="newsletter">Don't subscribe:</label>
-            <input type="checkbox" id="newsletter" name="newsletter" value="no">
+            <label for="magazine"></label><input type="checkbox" id="magazineNo" name="newsletter" value="no">
           </fieldset>
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
