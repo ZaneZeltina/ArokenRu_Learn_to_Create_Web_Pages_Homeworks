@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Homework 12</title>
+</head>
+<body>
+  <header>
+    <h1 id="up">Forms in HTML</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#about">About Forms</a>
+        </li>
+        <li>
+          <a href="#form_1">Form 1</a>
+        </li>
+        <li>
+          <a href="#form_2">Form 2</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <article>
+        <h2>Create forms in HTML</h2>
+        <p>
+          Today we are learning about <mark>forms</mark> in HTML document. <mark>Forms</mark> are essential for collecting user input and can be used for various purposes such as registration, feedback, and more. Below is a simple form example that includes text inputs, radio buttons, checkboxes, and a submit button.
+        </p>
+        <p>
+          In the beginning, we will create a simple form that collects a user's name, email, and their favorite programming language. The form will also include a submit button to send the data.
+        </p>
+        <p>
+          Every form in HTML document starts with tag <code>&lt;form&gt;</code> and ends with tag <code>&lt;/form&gt;</code>. Inside the form, we can use various input types such as text, email, radio, checkbox, and submit.
+        </p>
+        <p>
+          In tag <code>&lt;form&gt;</code> we can specify attributes like <code>action</code> and <code>method</code>. The <code>action</code> attribute defines where the form data will be sent when submitted, while the <code>method</code> attribute specifies how the data will be sent (usually "GET" or "POST").
+        </p>
+        <p>
+          In the form we use tags <code>&lt;input&gt;</code> for text inputs, <code>&lt;input type="email"&gt;</code> for email inputs, <code>&lt;input type="radio"&gt;</code> for radio buttons, and <code>&lt;input type="checkbox"&gt;</code> for checkboxes. Each input can have a <code>name</code> attribute to identify the data when submitted.
+        </p>
+        <p>
+          Tag input has these attributes: <code>type</code>, <code>name</code>, <code>value</code>, and <code>placeholder</code>. The <code>type</code> attribute specifies the type of input (e.g., text, email, radio, checkbox), the <code>name</code> attribute is used to identify the input data when the form is submitted, the <code>value</code> attribute defines the value that will be sent when the form is submitted, and the <code>placeholder</code> attribute provides a hint to the user about what to enter in the input field.
+        </p>
+        <p>
+          With tag input we must to use tag <code>&lt;label&gt;</code> to provide a label for each input field. The <code>for</code> attribute in the label should match the <code>id</code> of the corresponding input to ensure accessibility and usability.
+        </p>
+        <p>
+          We can unite some forms elements with tag <code>&lt;fieldset&gt;</code> to group related inputs together. This is especially useful for radio buttons and checkboxes, where we can use the <code>&lt;legend&gt;</code> tag to provide a title for the group.
+        </p>
+        <p>
+          Tag input has a different ways to be used, including: <br>
+          - Text input: <code>&lt;input type="text"&gt;</code> <br>
+          - Email input: <code>&lt;input type="email"&gt;</code> <br>
+          - Password input: <code>&lt;input type="password"&gt;</code> <br>
+          - Radio buttons: <code>&lt;input type="radio"&gt;</code> <br>
+          - Checkboxes: <code>&lt;input type="checkbox"&gt;</code> <br>
+          - Submit button: <code>&lt;input type="submit"&gt;</code>
+          - Color input: <code>&lt;input type="color"&gt;</code> <br>
+          - Date input: <code>&lt;input type="date"&gt;</code> <br>
+          - Datetime-local input: <code>&lt;input type="datetime-local"&gt;</code> <br>
+          - Month input: <code>&lt;input type="month"&gt;</code> <br>
+          - Week input: <code>&lt;input type="week"&gt;</code> <br>
+          - Time input: <code>&lt;input type="time"&gt;</code> <br>
+          - URL input: <code>&lt;input type="url"&gt;</code> <br>
+          - Tel input: <code>&lt;input type="tel"&gt;</code> <br>
+          - Search input: <code>&lt;input type="search"&gt;</code> <br>
+          - Number input: <code>&lt;input type="number"&gt;</code> <br>
+          - Range input: <code>&lt;input type="range"&gt;</code> <br>
+          - File input: <code>&lt;input type="file"&gt;</code> <br>
+        </p>
+        <p>
+          If we add <code>&lt;input type="radio"&gt;</code> we can use it to create a group of options where only one option can be selected at a time. Each radio button should have the same <code>name</code> attribute to group them together, and the <code>value</code> attribute defines the value that will be submitted when that option is selected.
+        </p>
+        <p>
+          If we add input type="file" we can use it to allow users to upload files. The <code>&lt;input type="file"&gt;</code> tag creates a file input field where users can select files from their device. We can also specify the <code>accept</code> attribute to limit the types of files that can be uploaded. We can use attribute <code>multiple</code> to allow users to select multiple files at once.
+        </p>
+        <p>
+          Tag textarea is used for multi-line text input. It allows users to enter larger amounts of text, such as comments or messages. The <code>&lt;textarea&gt;</code> tag can have attributes like <code>rows</code> and <code>cols</code> to specify the size of the text area.
+        </p>
+        <p>
+          In forms we can use tag <code>&lt;button&gt;</code> to create buttons. The <code>&lt;button&gt;</code> tag can be used for various purposes, such as submitting the form or performing a specific action. The button can have text or an icon inside it. We can use button with attribute <code>type="submit"</code> to submit the form data when clicked. Or with attribute <code>type="reset"</code> to reset the form fields to their default values. Also we can use button with attribute <code>type="button"</code> to create a button that performs a specific action without submitting the form.
+        </p>
+        <p>
+          Below is an example of a simple form that includes various input types, labels, and a submit button. The form collects a user's name, email, favorite programming language, and additional comments.
+        </p>
+        <p>
+          <mark>Remember!</mark> We must use all forms tags and attributes correctly to ensure that the form is functional and user-friendly. Properly structured forms enhance the user experience and make it easier for users to provide the required information.
+        </p>
+        <p>
+          We need to follow all these rules to create a well-structured and functional form in HTML. Forms are essential for collecting user input and can be used for various purposes such as registration, feedback, and more. By using the appropriate tags and attributes, we can create forms that are easy to use and accessible to all users.
+        </p>
+        <p>
+          Look at the example of full form below:
+        </p>
+      </article>
+    </section>
+    <section id="form_1">
+      <article>
+        <h2>Create Difficult form</h2>
+        <p>
+          Use all types of input and attributes in this form. This form will be more complex, allowing users to provide additional information such as
+        </p>
+        <form action="https://example.com/submit" method="POST">
+          <fieldset>
+            <legend>User Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+            <br>
+            <label for="age">Your Age:</label>
+            <input type="text" id="age" name="age" placeholder="Enter your age" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <br>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="Enter your website URL">
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <br>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+          </fieldset>
+          <fieldset>
+            <legend>Gender</legend>
+            <label for="gender_male">Male</label>
+            <input type="radio" id="gender_male" name="gender" value="male" checked>
+            <br>
+            <label for="gender_female">Female</label>
+            <input type="radio" id="gender_female" name="gender" value="female">
+          </fieldset>
+          <fieldset>
+            <legend>Favorite Programming Language</legend>
+            <label for="language">Favorite Programming Language:</label>
+            <input list="languages" type="text" id="language" name="language" placeholder="Enter your favorite programming language" required>
+            <datalist id="languages">
+              <option value="javascript">JavaScript</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+            </datalist>
+          </fieldset>
+          <fieldset>
+            <legend>Interests</legend>
+            <label for="interests">Select your interests:</label>
+            <input type="checkbox" id="interest_coding" name="interests" value="coding">
+            <br>
+            <label for="interest_coding">Coding</label>
+            <input type="checkbox" id="interest_gaming" name="interests" value="gaming">
+            <br>
+            <label for="interest_gaming">Gaming</label>
+            <input type="checkbox" id="interest_reading" name="interests" value="reading">
+            <br>
+            <label for="interest_reading">Reading</label>
+            <input type="checkbox" id="interest_traveling" name="interests" value="traveling">
+            <br>
+            <label for="interest_traveling">Traveling</label>
+            <input type="checkbox" id="interest_other" name="interests" value="other">
+          </fieldset>
+          <fieldset>
+            <legend>File Upload and additional Comments</legend>
+            <label for="file_upload">Upload your file:</label>
+            <input type="file" id="file_upload" name="file_upload" accept=".jpg, .png, .pdf">
+            <br>
+            <label for="comments">Additional Comments:</label>
+            <br>
+            <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here"></textarea>
+          </fieldset>
+          <button type="submit">Submit</button>
+          <br>
+          <button type="reset">Reset</button>
+        </form>
+      </article>
+    </section>
+    <section id="form_2">
+      <article>
+        <h2>Create second longer form</h2>
+        <p>
+          Use all types of input and attributes in this form. This form will be longer and more complex, allowing users to provide additional information such as their address, phone number, and preferences.
+        </p>
+        <form action="https://example.com/submit" method="POST">
+          <fieldset>
+            <legend>Address Information</legend>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            <br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            <br>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Enter your state" required>
+            <br>
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip" placeholder="Enter your ZIP code" required>
+          </fieldset>
+          <fieldset>
+            <legend>Contact Information</legend>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </fieldset>
+          <fieldset>
+            <legend>Your favorite color</legend>
+            <label for="color">Select your favorite color:</label>
+            <input list="colors" type="text" id="color" name="color" placeholder="Enter your favorite color" required>
+            <datalist id="colors">
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="yellow">Yellow</option>
+              <option value="purple">Purple</option>
+              <option value="orange">Orange</option>
+              <option value="pink">Pink</option>
+              <option value="black">Black</option>
+              <option value="other">Other</option>
+            </datalist>
+            <br>
+            <label for="color_picker">Choose your own color:</label>
+            <input type="color" id="color_picker" name="color_picker" value="#0000ff">
+          </fieldset>
+          <fieldset>
+            <legend>Add your favorite picture</legend>
+            <label for="favorite_picture">Upload your favorite picture:</label>
+            <input type="file" id="favorite_picture" name="favorite_picture" accept=".jpg, .png, .gif">
+          </fieldset>
+          <fieldset>
+            <legend>Feedback</legend>
+            <label for="feedback">Your Feedback:</label>
+            <br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here"></textarea>
+            <br>
+            <label for="rating">Rate your experience:</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" step="1" value="3">
+          <fieldset>
+            <legend>Date and Time</legend>
+            <label for="datetime-local">Select a date:</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local" required>
+            <br>
+            <label for="date">Select a Month:</label>
+            <input type="month" id="month" name="month" required>
+            <br>
+            <label for="week">Select a Week:</label>
+            <input type="week" id="week" name="week" required>
+            <br>
+            <label for="time">Select a Time:</label>
+            <input type="time" id="time" name="time" required>
+          </fieldset>
+          <fieldset>
+            <legend>Preferences</legend>
+            <label for="newsletter">Subscribe to newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <br>
+            <label for="newsletter">Don't subscribe:</label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="no">
+          </fieldset>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+        <p>
+          <mark>Important!</mark> much of forms elements we can't style with CSS, but we can use CSS to style the form elements, such as changing the background color, font size, and border styles. We can also use CSS to create responsive forms that adapt to different screen sizes. But, when we will learning <mark>Javascript</mark> programming language, we will learn how to manipulate form elements dynamically, validate user input, and enhance the user experience with interactive features.
+        </p>
+      </article>
+    </section>
+  </main>
+  <footer>
+   <div>
+    <p>
+      Page footer
+    </p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#about">About Forms</a>
+        </li>
+        <li>
+          <a href="#form_1">Form 1</a>
+        </li>
+        <li>
+          <a href="#form_2">Form 2</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <a href="#up">Go Up</a>
+      <p>&copy; 2025 Homework 12 - Forms in HTML</p>
+    </div>
+   </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

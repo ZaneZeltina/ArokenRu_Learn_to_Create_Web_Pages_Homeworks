@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Homework 9</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>Header manu item Nr. 1</li>
+        <li>Header manu item Nr. 1</li>
+        <li>Header manu item Nr. 1</li>
+        <li>Header manu item Nr. 1</li>
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <h1>Create Video and Audio files</h1>
+  </div>
+  <section>
+    <p>
+      Today we are looking different ways how we can work with video and audio files in our <mark>HTML document</mark>.
+    </p>
+    <p>
+      Here we add video file with necessary HTML document <mark>video attributes</mark>.
+    </p>
+    <p>
+      We use tags: video and in this tag we create tag: source and add two formats of our video file. First, we add video file with <mark>webm</mark> format and in second video we use: <mark>mp4</mark> file format.
+    </p>
+    <p>
+      For web browser fastest understanding our video files we must to use in tag: source attribute: <mark>type="video/webm"</mark> and in second tag source we need to write: <mark>type="video/mp4"</mark>.
+    </p>
+    <p>
+      We do it for one reason. If some web browser don't allow webm format, it show to us mp4 format video. But if, our browser don't allow any of these formats, we need to write something for ours clients, who use our page.
+    </p>
+    <p>
+      Also we can to use HTML document video attributes: controls, muted, autoplay, loop, poster, preload, playsinline.
+    </p>
+    <p>
+      We use teg video attribute: controls for add to our video file controls panel.
+    </p>
+    <p>
+      We can add tag video attribute: muted for turn off sound of our video file. But in nowadays in web browsers all video for a default are muted. That is doing because, if video file is don't muted it is disturbing page users.
+    </p>
+    <p>
+      Also, we can add in video tag attribute: autoplay, who starts us video file automatic always when we reload us page.
+    </p>
+    <p>
+      Tag video attribute: loop is necessary if we want to repeat us video file infinite times.
+    </p>
+    <p>
+      Good practice is: adding for tag video attribute: poster="", where in "" we put the image, what will be our video cover. We can add some photo or anything else, what we want to show to page users, when video file is not playing.
+    </p>
+    <p>
+      Good practice is add in tag video attribute: <mark>preload=""</mark>, where we add value: <mark>metadata</mark>, what is some video data. It is necessary for fast web page loading. If we add this value, we will see video file, but it don't fully loading in page. It loading fully, when we will pressing play button. Also we can add value: none. It means: video file and poster image don't load, we only will see gray place and controls panel. In attribute: preload we can add other values. Also in there we can add video image, video cover image. Then we don't use attribute: poster. Default value of preload attribute is: <mark>"auto"</mark>, what means all video data are loading when we open the page.
+    </p>
+    <p>
+      In tag video we must to add attribute: <mark>playsinline</mark> , when we want to change video file behavior on mobile devices. It will be show not in full size. It will don't opening in full screen, it will be opening in his standart element.
+    </p>
+    <p>Look for these terms with example.</p>
+    <h2>First Simplest way to add video file in HTML document</h2>
+    <p>
+      We add video file using just tag: video. We use very necessary video attribute: <mark>controls</mark> to give to page users control option. Also, we use attribute: poster, to add video preview image.
+    </p>
+    <video src="video/clouds.mp4" width="600" height="400" controls playsinline preload="metadata" poster="img/clouds.jpg"></video>
+    <h2>We use second way to add video</h2>
+    <p>
+      We add video files, many video formats. If users web browser don't allow some of video file, it will play that video file, what it allows. In situation, if some user web browser don't allow none of these formats it will be show a text: Sorry, your web browser can't to show this video file!
+    </p>
+    <p>
+      Look for it for a example.
+    </p>
+    <video width="600" height="450" controls playsinline preload="metadata" poster="img/swan.jpg">
+      <source src="video/water.webm" type="video/webm">
+      <source src="video/water.mp4" type="video/mp4">
+      <p>
+        Sorry, your web browser can't to show this video file!
+      </p>
+    </video>
+    <p>
+      We know, it's difficult to add in wright way video files in our page. We must to practice and add another video file using second way of video adding.
+    </p>
+    <h2>Add another video file</h2>
+    <p>
+      We are adding third video to us web page, using method second, where we are adding <mark>several </mark>video formats. And we know, why we are doing it.
+    </p>
+    <video width="600" height="400" controls playsinline preload="metadata" poster="img/sunset.jpg">
+      <source src="video/sunset.webm" type="video/webm">
+      <source src="video/sunset.mp4" type="video/mp4">
+      <p>
+        Sorry, your web browser can't to show this video file!
+      </p>
+    </video>
+    <h2>Add Audio file</h2>
+    <p>
+      Here we can add audio file. Audio file. We must to use tag: audio. Tag audio has all of them attributes what is in tag: video. Add audio file, in: standart<mark>mp3</mark> format. Look for adding audio file in our HTML document.
+    </p>
+    <p>
+      <h2>First way to add audio file</h2>
+      Easiest way to add audio file is using only tag: audio, also use all video tag attributes. Don't forget use very necessary attribute: <mark>controls</mark>. We don't use attributes: width and height. We also don't attribute: poster.
+    </p>
+    <audio src="audio/funny.mp3" controls playsinline preload="metadata"></audio>
+    <h2>Second way to add audio file</h2>
+    <p>
+      We add audio file using several audio file formats. We are doing it for, if some users web browser don't allow some audio file format, it will play different audio file. But it don't allow none of these, then it will show a message: Sorry, but your web browser can't play this audio file!
+    </p>
+    <p>
+      Look for this with a example.
+    </p>
+    <audio controls playsinline preload="metadata">
+      <source src="audio/jungle.mp3" type="audio/mp3">
+      <source src="audio/jungle.ogg" type="audio/ogg">
+      <p>
+        Sorry, but your web browser can't play this audio file!
+      </p>
+    </audio>
+    <h3>Do this second time</h3>
+    <p>
+      Add another audio file, using several audio formats. We see it's not so hard that video file. We must to practice.
+    </p>
+    <audio controls preload="metadata">
+      <source src="audio/toy.mp3" type="audio/mp3">
+      <source src="audio/toy.ogg" type="audio/ogg">
+      <p>
+        Sorry, but your web browser can't play this audio file!
+      </p>
+    </audio>
+    <h2>Add video and interactive elements using iframe</h2>
+    <p>
+      We can add to our web page interactive elements. It is: <mark>same maps</mark>, using web services, <mark>widgets</mark>, videos from <mark>Youtube</mark> abd another places.
+    </p>
+    <p>
+      It is not difficult, because, all what we need is just to copy a code from web services and Youtube. Look for it for examples.
+    </p>
+    <h3>
+      Add a map from Google Maps.
+    </h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2165.4058625650946!2d24.26967807710488!3d57.130122973625014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTfCsDA3JzQ4LjQiTiAyNMKwMTYnMjAuMSJF!5e0!3m2!1slv!2slv!4v1749308275764!5m2!1slv!2slv" width="600" height="380" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>
+      Now we have interactive map from Google Maps.
+    </p>
+    <h3>Add video from Youtube</h3>
+    <iframe width="600" height="380" src="https://www.youtube.com/embed/6PL2TqBdz0I?si=ftbPZfC21IxPSr84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>
+      Here we are seeing new video attributes. But they are not difficult. Attribute: title has a video description. Just like usual title in our <mark>HTML</mark> document. Attribute: allowfullscreen means: the video can be played in full screen. We see, the tag: <mark>iframe
+      </mark> has a new attribute: frameborder with value: "0". It is old attribute, and we in our projects must to delete it. That's still the old approach. It is no longer used in new projects, but in old projects we see it.
+    </p>
+    <p>
+      Also we see new attribute: loading: with value: <mark>"lazy"</mark>. That's mean, the video is not fully load. It is loaded gradually. We will learning about this attribute a little later.
+    </p>
+  </section>
+  <p>Here is starting page footer</p>
+  <footer>
+    <nav>
+      <ol>
+        <li>Footer menu item</li>
+        <li>Footer menu item</li>
+        <li>Footer menu item</li>
+        <li>Footer menu item</li>
+      </ol>
+      <ul>
+        <li>Second footer menu item Nr. 1</li>
+        <li>Second footer menu item Nr. 1</li>
+        <li>Second footer menu item Nr. 1</li>
+        <li>Second footer menu item Nr. 1</li>
+      </ul>
+    </nav>
+    <p>The End of page footer</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
